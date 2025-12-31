@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Files Storage</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header class="header glass">
+  <div class="header-content">
+    <h1 class="headerwfs">Welcome to Files Storage</h1>
+    <p class="subheadp">Please create folders and upload files inside folders</p>
+  </div>
+
+  <nav class="top-bar">
+    <div class="action" id="fileManagerBtn">
+      <svg class="icon blue" viewBox="0 0 24 24">
+        <path d="M3 6h6l2 2h10v10a2 2 0 0 1-2 2H3z"/>
+      </svg>
+      <span class="text">File Manager</span>
+    </div>
+
+<!--     <div class="action" id="createFolderBtn">
+      <svg class="icon green" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+      <span class="text">Create Folder</span>
+    </div> -->
+
+<!--     <div class="search-box">
+      <svg class="icon orange" viewBox="0 0 24 24">
+        <path d="M21 21l-4.3-4.3M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search folders..." />
+    </div> -->
+  </nav>
+</header>
+
+<main class="main">
+
+<section id="createFolderSection" class="create-section">
+  <h3>Create Folder</h3>
+  <div class="folder_form">
+    <input type="text" id="folderNameInput" placeholder="Folder name" />
+    <button id="saveFolderBtn">Create</button>
+  </div>
+</section>
+
+<section id="fileManagerSection">
+  <h3>Folders</h3>
+  <nav class="top-bar">
+  <div class="action" id="createFolderBtn">
+      <svg class="icon green" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+      <span class="text">Create Folder</span>
+    </div>
+  
+  <div class="search-box">
+      <svg class="icon orange" viewBox="0 0 24 24">
+        <path d="M21 21l-4.3-4.3M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search folders..." />
+    </div>
+    </nav>
+  <div id="foldersList"></div>
+</section>
+
+<section id="insideFolderSection" style="display:none;">
+  <h3 id="insideFolderTitle"></h3>
+  <p id="folderPath"></p>
+
+  <nav class="top-bar-files">
+  <div class="search-box-files">
+    <svg class="icon orange" viewBox="0 0 24 24">
+      <path d="M21 21l-4.3-4.3M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+    </svg>
+    <input type="text" id="fileSearchInput" placeholder="Search files..." />
+  </div>
+</nav>
+  
+
+
+  
+  <div class="upload-box" id="uploadBox">
+    <p>Please upload or drag and drop ZIP files only.</p>
+    <input type="file" id="fileInput" accept=".zip" hidden />
+    <button id="uploadBtn">Upload</button>
+  </div>
+
+  <div id="filesList"></div>
+</section>
+
+</main>
+
+<footer class="app-footer">
+  <p>Thank you. &copy; Files Storage</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
