@@ -342,3 +342,30 @@ body {
   width: 160px;
 }
 
+.warning-message {
+  background-color: #fff3cd; /* light yellow */
+  color: #ff6e00;           /* neon orange */
+  border: 2px solid #ff3d00; /* neon red border */
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .warning-message {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .warning-message {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
